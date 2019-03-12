@@ -60,7 +60,11 @@ void loop()
         digitalWrite(lcdDisplayPin, HIGH);
         lcd.display();
         lcd.clear();
+        lcd.print("Sending");
+        lcd.setCursor(0, 1);
+        lcd.print("complaint...");
         SendComplaint();
+        delay(5000);
         Serial.println("Complaint Sent");
         lcd.clear();
         lcd.print("Complaint Sent");
